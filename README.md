@@ -4,14 +4,14 @@
 - Rebeca Batista Medeiros da Fonseca | DRE: 114156733
 
 ## Descrição
-Implementação do backend em PHP/MySQL para o projeto da Urna Eletrônica.
+Implementação do backend em PHP/MySQL para o projeto da Urna Eletrônica, um simulador da urna eletrônica brasileira.
 
 ## Documentação
 O projeto utiliza uma documentação completa composta por: jsdoc para o código javascript e Doxygen para o código PHP.
 - Documentação jsdoc disponível acessando ```out/index.html```
 - Documentação Doxygen disponível acessando ```doc/html/index.html```
 
-Segue imagem do simulador da urna eletrônica brasileira utilizado:
+Segue imagem do simulador:
 ![Urna Eletrônica](screenshot.jpg)
 
 ## Como visualizar o trabalho
