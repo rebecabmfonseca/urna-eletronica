@@ -1,7 +1,7 @@
 # Trabalho Final - Urna Eletrônica
 ## Alunas
 - Carla Moreno Barbosa | DRE: 117250502
-- Rebeca Fonseca _**[INSERIR SOBRENOME]**_ | DRE: **_[INSERIR DRE]_**
+- Rebeca Batista Medeiros da Fonseca | DRE: 114156733
 
 ## Descrição
 Implementação do backend em PHP/MySQL para o projeto da Urna Eletrônica.
@@ -9,7 +9,7 @@ Implementação do backend em PHP/MySQL para o projeto da Urna Eletrônica.
 ## Documentação
 O projeto utiliza uma documentação completa composta por: jsdoc para o código javascript e Doxygen para o código PHP.
 - Documentação jsdoc disponível acessando ```out/index.html```
-- Documentação Doxygen disponível acessando _**[INSERIR CAMINHO]**_
+- Documentação Doxygen disponível acessando ```doc/html/index.html```
 
 Segue imagem do simulador da urna eletrônica brasileira utilizado:
 ![Urna Eletrônica](screenshot.jpg)
