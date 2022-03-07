@@ -183,7 +183,11 @@ function corrigir() {
   (new Audio('audio/se2.mp3')).play()
   comecarEtapa()
 }
-
+/**
+ * Faz requisição para guardar o voto
+ * @param voto número votado
+ * 
+ */
 function guardarVoto(voto){
   let url = `php/urna.php?numero=${voto}`
   ajax(url, 'GET', (response) => {

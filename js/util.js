@@ -1,3 +1,11 @@
+/**
+ * Faz a chamada para obter ou mandar dados 
+ * 
+ * @param url
+ * @param method
+ * @param callback
+ * 
+ */
 function ajax(url, method, callback) {
   let request = new XMLHttpRequest();
   request.overrideMimeType("application/json");

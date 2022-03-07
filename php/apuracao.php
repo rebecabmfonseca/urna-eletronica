@@ -1,7 +1,7 @@
 <?php
 include("conexao.php");
 
-$result = $conn->query("SELECT * FROM candidatos order by voto desc");
+$result = $conn->query("SELECT * FROM candidatos where sou_vice=false order by voto desc");
 
 if($result->num_rows > 0){
     echo "<table> <tr> <td>Nome</td> <td>Número</td> <td>Partido</td> <td>Votos</td></tr>";
@@ -13,5 +13,5 @@ if($result->num_rows > 0){
     echo "Sem candidatos";
 }
 
-
+mysqli_close($conn);
 ?>
