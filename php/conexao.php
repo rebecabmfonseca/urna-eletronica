@@ -3,6 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "MinhaNovaSenha123@";
+$banco = "testando";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -11,7 +12,7 @@ $conn = new mysqli($servername, $username, $password);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$conn->query("use testando;");
+$conn->query("use ".$banco);
 //echo "Connected successfully\n";
 
 
