@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @apuracao.php
  *
@@ -26,20 +27,58 @@
 
 include("conexao.php");
 
-$result = $conn->query("SELECT * FROM candidatos where sou_vice=false order by voto desc");
-
-// Caso o candidato tenha recebido algum voto, é retornado em tela seu
-// nome, número, partido e quantidade de votos. Caso não existam
-//candidatos com votos, é retornado a mensagem "Sem candidatos"
-if($result->num_rows > 0){
-    echo "<table> <tr> <td>Nome</td> <td>Número</td> <td>Partido</td> <td>Votos</td></tr>";
-    while($row = $result->fetch_assoc()) {
-        echo "<tr> <td> " . $row["nome"]. "</td> <td> ".$row["numero"]." </td> <td>" . $row["partido"]. "</td><td> " . $row["voto"]. "</td></tr>";
+if (isset($_GET['reset'])) {
+    $reset = $_GET['reset'];
+    if ($reset) {
+        $result = $conn->query("update candidatos set voto = 0;");
+        echo "Eleições reiniciadas com sucesso!";
+        $host = 'http://' . $_SERVER['SERVER_NAME'];
+        header("Location: " . $host . "/urna-eletronica");
+        die();
     }
-    echo "</table>";
-}else{
-    echo "Sem candidatos";
-}
+} else {
 
+    $result = $conn->query("SELECT * FROM candidatos where sou_vice=false and tipo=1 order by voto desc");
+
+    // Caso o candidato tenha recebido algum voto, é retornado em tela seu
+    // nome, número, partido e quantidade de votos. Caso não existam
+    //candidatos com votos, é retornado a mensagem "Sem candidatos"
+    if ($result->num_rows > 0) {
+        echo "<table> <tr> <td>Vereador</td> <td>Número</td> <td>Partido</td> <td>Votos</td></tr>";
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr> <td> " . $row["nome"] . "</td> <td> " . $row["numero"] . " </td> <td>" . $row["partido"] . "</td><td> " . $row["voto"] . "</td></tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "Sem candidatos Vereadores";
+    }
+
+    echo "<br><br>";
+
+    $result = $conn->query("SELECT * FROM candidatos where sou_vice=false and tipo=2 order by voto desc");
+
+    if ($result->num_rows > 0) {
+        echo "<table> <tr> <td>Prefeito</td> <td>Número</td> <td>Partido</td> <td>Votos</td></tr>";
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr> <td> " . $row["nome"] . "</td> <td> " . $row["numero"] . " </td> <td>" . $row["partido"] . "</td><td> " . $row["voto"] . "</td></tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "Sem candidatos Prefeitos";
+    }
+
+    echo "<br><br>";
+
+    $result = $conn->query("SELECT * FROM candidatos where numero='branco' or numero='nulo' order by voto desc");
+    if ($result->num_rows > 0) {
+        echo "<table> <tr> <td>Votos inválidos</td>  <td>Votos</td></tr>";
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr> <td> " . $row["nome"] . "</td> <td> " . $row["voto"] . "</td></tr>";
+        }
+        echo "</table>";
+    }
+    echo "<br><br>";
+    $host = 'http://' . $_SERVER['SERVER_NAME'];
+    echo "<a href='" . $host . "/urna-eletronica/php/apuracao.php?reset=true'> Encerrar as eleições.</a>";
+}
 mysqli_close($conn);
-?>
