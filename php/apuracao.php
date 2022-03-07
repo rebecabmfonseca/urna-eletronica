@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @apuracao.php
  *
