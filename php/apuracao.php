@@ -1,9 +1,9 @@
 <?php
 /**
- * @apuracao.php
+ * @file apuracao.php
  *
  * O código a seguir é responsável por apurar os votos e retornar o
- *  total de votos recebidos por cada candidato.
+ * total de votos recebidos por cada candidato.
  *
  * PHP versão 7.4.3
  *

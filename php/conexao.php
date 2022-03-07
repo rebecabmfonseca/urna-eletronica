@@ -1,6 +1,6 @@
 <?php
 /**
- * @conexao.php
+ * @file conexao.php
  *
  * O código a seguir é responsável por estabelecer a conexão com o
  * servidor.

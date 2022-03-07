@@ -1,6 +1,6 @@
 <?php
 /**
- * @urna.php
+ * @file urna.php
  *
  * O código a seguir é responsável por guardar cada voto no banco de
  * dados.
