@@ -2,8 +2,7 @@
 /**
  * @file conexao.php
  *
- * O código a seguir é responsável por estabelecer a conexão com o
- * servidor.
+ * Responsável por estabelecer a conexão com o servidor.
  *
  * PHP versão 7.4.3
  *

@@ -3,20 +3,18 @@
 \doxysubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-if(isset(\$\+\_\+\+GET\mbox{[}\textquotesingle{}reset\textquotesingle{}\mbox{]})) \mbox{\hyperlink{apuracao_8php_ad908b96d32f6275bf3ab9e93283a8588}{else}}
+\mbox{\hyperlink{apuracao_8php_aaa453714507bb5c2e205a9b6ed660d37}{if}}(isset(\$\+\_\+\+GET\mbox{[}\textquotesingle{}reset\textquotesingle{}\mbox{]})) \mbox{\hyperlink{apuracao_8php_ad908b96d32f6275bf3ab9e93283a8588}{else}}
 \item 
-\mbox{\Hypertarget{apuracao_8php_a112ef069ddc0454086e3d1e6d8d55d07}\label{apuracao_8php_a112ef069ddc0454086e3d1e6d8d55d07}} 
-{\bfseries \$result} = \$conn-\/$>$query(\char`\"{}SELECT $\ast$ FROM candidatos where sou\+\_\+vice=false and tipo=2 order by voto desc\char`\"{})
+\mbox{\hyperlink{apuracao_8php_a112ef069ddc0454086e3d1e6d8d55d07}{\$result}} = \$conn-\/$>$query(\char`\"{}SELECT $\ast$ FROM candidatos where sou\+\_\+vice=false and tipo=2 order by voto desc\char`\"{})
 \item 
 \mbox{\hyperlink{apuracao_8php_aaa453714507bb5c2e205a9b6ed660d37}{if}} ( \$result-\/$>$num\+\_\+rows $>$ 0)
 \item 
-\mbox{\Hypertarget{apuracao_8php_a711797613cb863ca0756df789c396bf2}\label{apuracao_8php_a711797613cb863ca0756df789c396bf2}} 
-{\bfseries \$host} = \textquotesingle{}http\+://\textquotesingle{} . \$\+\_\+\+SERVER\mbox{[}\textquotesingle{}SERVER\+\_\+\+NAME\textquotesingle{}\mbox{]}
+\mbox{\hyperlink{apuracao_8php_a711797613cb863ca0756df789c396bf2}{\$host}} = \textquotesingle{}http\+://\textquotesingle{} . \$\+\_\+\+SERVER\mbox{[}\textquotesingle{}SERVER\+\_\+\+NAME\textquotesingle{}\mbox{]}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-O código a seguir é responsável por apurar os votos e retornar o total de votos recebidos por cada candidato.
+Responsável por apurar os votos e retornar o total de votos recebidos por cada candidato.
 
 PHP versão 7.\+4.\+3
 
@@ -37,17 +35,29 @@ Carla Moreno e Rebeca Fonseca
 
 
 \doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{apuracao_8php_a711797613cb863ca0756df789c396bf2}\label{apuracao_8php_a711797613cb863ca0756df789c396bf2}} 
+\index{apuracao.php@{apuracao.php}!\$host@{\$host}}
+\index{\$host@{\$host}!apuracao.php@{apuracao.php}}
+\doxysubsubsection{\texorpdfstring{\$host}{$host}}
+{\footnotesize\ttfamily \$host = \textquotesingle{}http\+://\textquotesingle{} . \$\+\_\+\+SERVER\mbox{[}\textquotesingle{}SERVER\+\_\+\+NAME\textquotesingle{}\mbox{]}}
+
+\mbox{\Hypertarget{apuracao_8php_a112ef069ddc0454086e3d1e6d8d55d07}\label{apuracao_8php_a112ef069ddc0454086e3d1e6d8d55d07}} 
+\index{apuracao.php@{apuracao.php}!\$result@{\$result}}
+\index{\$result@{\$result}!apuracao.php@{apuracao.php}}
+\doxysubsubsection{\texorpdfstring{\$result}{$result}}
+{\footnotesize\ttfamily \$result = \$conn-\/$>$query(\char`\"{}SELECT $\ast$ FROM candidatos where sou\+\_\+vice=false and tipo=2 order by voto desc\char`\"{})}
+
 \mbox{\Hypertarget{apuracao_8php_ad908b96d32f6275bf3ab9e93283a8588}\label{apuracao_8php_ad908b96d32f6275bf3ab9e93283a8588}} 
 \index{apuracao.php@{apuracao.php}!else@{else}}
 \index{else@{else}!apuracao.php@{apuracao.php}}
 \doxysubsubsection{\texorpdfstring{else}{else}}
-{\footnotesize\ttfamily if ( \$result-\/$>$num\+\_\+rows $>$ 0) else}
+{\footnotesize\ttfamily \mbox{\hyperlink{apuracao_8php_aaa453714507bb5c2e205a9b6ed660d37}{if}} ( \$result-\/$>$num\+\_\+rows $>$ 0) else}
 
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\{}
 \DoxyCodeLine{}
-\DoxyCodeLine{    \$result = \$conn-\/>query(\textcolor{stringliteral}{"{}SELECT * FROM candidatos where sou\_vice=false and tipo=1 order by voto desc"{}})}
+\DoxyCodeLine{    \mbox{\hyperlink{apuracao_8php_a112ef069ddc0454086e3d1e6d8d55d07}{\$result}} = \mbox{\hyperlink{conexao_8php_aa8a5a87b9c1a6a0819b88447cbe41877}{\$conn}}-\/>query(\textcolor{stringliteral}{"{}SELECT * FROM candidatos where sou\_vice=false and tipo=1 order by voto desc"{}})}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{apuracao_8php_aaa453714507bb5c2e205a9b6ed660d37}\label{apuracao_8php_aaa453714507bb5c2e205a9b6ed660d37}} 

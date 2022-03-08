@@ -2,8 +2,7 @@
 /**
  * @file urna.php
  *
- * O código a seguir é responsável por guardar cada voto no banco de
- * dados.
+ * Responsável por guardar cada voto no banco de dados.
  *
  * PHP versão 7.4.3
  *
