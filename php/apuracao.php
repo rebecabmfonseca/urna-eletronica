@@ -32,7 +32,8 @@ if (isset($_GET['reset'])) {
         $result = $conn->query("update candidatos set voto = 0;");
         echo "Eleições reiniciadas com sucesso!";
         $host = 'http://' . $_SERVER['SERVER_NAME'];
-        header("Location: " . $host . "/urna-eletronica");
+        echo "Volte para votar <a href='".$host."/urna-eletronica'>aqui</a>.";
+        //header("Location: " . $host . "/urna-eletronica");
         die();
     }
 } else {
