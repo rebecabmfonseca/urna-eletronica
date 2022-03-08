@@ -25,9 +25,9 @@
 
 // Variáveis
 $servername = "localhost";
-$username = "root";
+$username = "id18567593_tees";
 $password = "MinhaNovaSenha123@";
-$banco = "testando";
+$banco = "id18567593_trabalhotees";
 
 // Cria a conexão
 $conn = new mysqli($servername, $username, $password);
